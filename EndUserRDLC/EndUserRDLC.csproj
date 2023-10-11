@@ -7,15 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\reports\dsTest.Designer.cs">
+    <Content Update="wwwroot\reports\dsEmployee.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>dsTest.xsd</DependentUpon>
+      <DependentUpon>dsEmployee.xsd</DependentUpon>
     </Content>
-    <Content Update="wwwroot\reports\dsTest.xsd">
+    <Content Update="wwwroot\reports\dsEmployee.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsTest.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsEmployee.Designer.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
   </ItemGroup>
 
 </Project>

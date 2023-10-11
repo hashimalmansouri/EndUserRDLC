@@ -1,0 +1,76 @@
+﻿
+<h3>Display and export the report file</h3>
+<hr />
+<form method="post" id="my-form">
+    <div class="row">
+        <div class="col-md-6">
+            <button type="button" onclick="displayReport();" id="btn-display" class="btn btn-lg btn-primary">
+                Display Report
+            </button>
+        </div>
+        <div class="col-md-6">
+            <button type="submit" asp-action="ExportPDF" class="btn btn-lg btn-success">
+                Export PDF
+            </button>
+        </div>
+    </div>
+</form>
+<hr />
+<h3>Download RDLC file to edit, then upload the editied one</h3>
+<hr />
+<div class="row mt-5">
+    <div class="col-md-6">
+        <a asp-action="DownloadRDLC" class="btn btn-lg btn-dark">Download RDLC File</a>
+    </div>
+    <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data" asp-action="UploadRDLC">
+            <input type="file" name="myfile" />
+            <button type="submit" class="btn btn-lg btn-danger">Upload RDLC File</button>
+        </form>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div id="report-viewer"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function displayReport() {
+            var form = $('#my-form');
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Test/DisplayReport",
+                    data: $(form).serialize(),
+                    async: true,
+                    beforeSend: function () {
+                        $('#btn-display').attr('disabled', true);
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            var ele = `<iframe id="viewer" style="width: 100%; height: 1000px;"></iframe>`;
+                            $('#report-viewer').html(ele);
+                            const byteArray = Uint8Array.from(atob(response.data), c => c.charCodeAt(0));
+                            const blob = new Blob([byteArray], { type: 'application/pdf' });
+                            const viewer = document.getElementById(`viewer`);
+                            const objectUrl = URL.createObjectURL(blob);
+                            viewer.setAttribute('src', objectUrl);
+                            viewer.onload = () => URL.revokeObjectURL(objectUrl);
+                        } else {
+                        }
+                    },
+                    complete: function () {
+                        $('#btn-display').attr('disabled', false);
+                    }
+                });
+                return false;
+            }
+        }
+    </script>
+}

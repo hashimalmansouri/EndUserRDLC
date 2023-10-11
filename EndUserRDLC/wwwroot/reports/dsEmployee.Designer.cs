@@ -20,17 +20,17 @@ namespace EndUserRDLC.wwwroot.reports {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsTest")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsEmployee")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsTest : global::System.Data.DataSet {
+    public partial class dsEmployee : global::System.Data.DataSet {
         
-        private dsTestDataTable tabledsTest;
+        private dsEmployeeDataTable tabledsEmployee;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public dsTest() {
+        public dsEmployee() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EndUserRDLC.wwwroot.reports {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected dsTest(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsEmployee(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EndUserRDLC.wwwroot.reports {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["dsTest"] != null)) {
-                    base.Tables.Add(new dsTestDataTable(ds.Tables["dsTest"]));
+                if ((ds.Tables["dsEmployee"] != null)) {
+                    base.Tables.Add(new dsEmployeeDataTable(ds.Tables["dsEmployee"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EndUserRDLC.wwwroot.reports {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dsTestDataTable _dsTest {
+        public dsEmployeeDataTable _dsEmployee {
             get {
-                return this.tabledsTest;
+                return this.tabledsEmployee;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EndUserRDLC.wwwroot.reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsTest cln = ((dsTest)(base.Clone()));
+            dsEmployee cln = ((dsEmployee)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EndUserRDLC.wwwroot.reports {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["dsTest"] != null)) {
-                    base.Tables.Add(new dsTestDataTable(ds.Tables["dsTest"]));
+                if ((ds.Tables["dsEmployee"] != null)) {
+                    base.Tables.Add(new dsEmployeeDataTable(ds.Tables["dsEmployee"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EndUserRDLC.wwwroot.reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabledsTest = ((dsTestDataTable)(base.Tables["dsTest"]));
+            this.tabledsEmployee = ((dsEmployeeDataTable)(base.Tables["dsEmployee"]));
             if ((initTable == true)) {
-                if ((this.tabledsTest != null)) {
-                    this.tabledsTest.InitVars();
+                if ((this.tabledsEmployee != null)) {
+                    this.tabledsEmployee.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EndUserRDLC.wwwroot.reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsTest";
+            this.DataSetName = "dsEmployee";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsTest.xsd";
+            this.Namespace = "http://tempuri.org/dsEmployee.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabledsTest = new dsTestDataTable();
-            base.Tables.Add(this.tabledsTest);
+            this.tabledsEmployee = new dsEmployeeDataTable();
+            base.Tables.Add(this.tabledsEmployee);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerialize_dsTest() {
+        private bool ShouldSerialize_dsEmployee() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EndUserRDLC.wwwroot.reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsTest ds = new dsTest();
+            dsEmployee ds = new dsEmployee();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace EndUserRDLC.wwwroot.reports {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void dsTestRowChangeEventHandler(object sender, dsTestRowChangeEvent e);
+        public delegate void dsEmployeeRowChangeEventHandler(object sender, dsEmployeeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dsTestDataTable : global::System.Data.TypedTableBase<dsTestRow> {
+        public partial class dsEmployeeDataTable : global::System.Data.TypedTableBase<dsEmployeeRow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -291,8 +291,8 @@ namespace EndUserRDLC.wwwroot.reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsTestDataTable() {
-                this.TableName = "dsTest";
+            public dsEmployeeDataTable() {
+                this.TableName = "dsEmployee";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace EndUserRDLC.wwwroot.reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal dsTestDataTable(global::System.Data.DataTable table) {
+            internal dsEmployeeDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +317,7 @@ namespace EndUserRDLC.wwwroot.reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected dsTestDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dsEmployeeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -373,49 +373,49 @@ namespace EndUserRDLC.wwwroot.reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsTestRow this[int index] {
+            public dsEmployeeRow this[int index] {
                 get {
-                    return ((dsTestRow)(this.Rows[index]));
+                    return ((dsEmployeeRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsTestRowChangeEventHandler dsTestRowChanging;
+            public event dsEmployeeRowChangeEventHandler dsEmployeeRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsTestRowChangeEventHandler dsTestRowChanged;
+            public event dsEmployeeRowChangeEventHandler dsEmployeeRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsTestRowChangeEventHandler dsTestRowDeleting;
+            public event dsEmployeeRowChangeEventHandler dsEmployeeRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsTestRowChangeEventHandler dsTestRowDeleted;
+            public event dsEmployeeRowChangeEventHandler dsEmployeeRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AdddsTestRow(dsTestRow row) {
+            public void AdddsEmployeeRow(dsEmployeeRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsTestRow AdddsTestRow(string Id, string Name, string Job, string Address, string Phone) {
-                dsTestRow rowdsTestRow = ((dsTestRow)(this.NewRow()));
+            public dsEmployeeRow AdddsEmployeeRow(int Id, string Name, string Job, string Address, string Phone) {
+                dsEmployeeRow rowdsEmployeeRow = ((dsEmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Name,
                         Job,
                         Address,
                         Phone};
-                rowdsTestRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdsTestRow);
-                return rowdsTestRow;
+                rowdsEmployeeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdsEmployeeRow);
+                return rowdsEmployeeRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dsTestDataTable cln = ((dsTestDataTable)(base.Clone()));
+                dsEmployeeDataTable cln = ((dsEmployeeDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,7 +423,7 @@ namespace EndUserRDLC.wwwroot.reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dsTestDataTable();
+                return new dsEmployeeDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -439,7 +439,7 @@ namespace EndUserRDLC.wwwroot.reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
@@ -449,34 +449,34 @@ namespace EndUserRDLC.wwwroot.reports {
                 base.Columns.Add(this.columnAddress);
                 this.columnPhone = new global::System.Data.DataColumn("Phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhone);
-                this.ExtendedProperties.Add("Generator_TablePropName", "_dsTest");
-                this.ExtendedProperties.Add("Generator_UserTableName", "dsTest");
+                this.ExtendedProperties.Add("Generator_TablePropName", "_dsEmployee");
+                this.ExtendedProperties.Add("Generator_UserTableName", "dsEmployee");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsTestRow NewdsTestRow() {
-                return ((dsTestRow)(this.NewRow()));
+            public dsEmployeeRow NewdsEmployeeRow() {
+                return ((dsEmployeeRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dsTestRow(builder);
+                return new dsEmployeeRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dsTestRow);
+                return typeof(dsEmployeeRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dsTestRowChanged != null)) {
-                    this.dsTestRowChanged(this, new dsTestRowChangeEvent(((dsTestRow)(e.Row)), e.Action));
+                if ((this.dsEmployeeRowChanged != null)) {
+                    this.dsEmployeeRowChanged(this, new dsEmployeeRowChangeEvent(((dsEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -484,8 +484,8 @@ namespace EndUserRDLC.wwwroot.reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dsTestRowChanging != null)) {
-                    this.dsTestRowChanging(this, new dsTestRowChangeEvent(((dsTestRow)(e.Row)), e.Action));
+                if ((this.dsEmployeeRowChanging != null)) {
+                    this.dsEmployeeRowChanging(this, new dsEmployeeRowChangeEvent(((dsEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -493,8 +493,8 @@ namespace EndUserRDLC.wwwroot.reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dsTestRowDeleted != null)) {
-                    this.dsTestRowDeleted(this, new dsTestRowChangeEvent(((dsTestRow)(e.Row)), e.Action));
+                if ((this.dsEmployeeRowDeleted != null)) {
+                    this.dsEmployeeRowDeleted(this, new dsEmployeeRowChangeEvent(((dsEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,14 +502,14 @@ namespace EndUserRDLC.wwwroot.reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dsTestRowDeleting != null)) {
-                    this.dsTestRowDeleting(this, new dsTestRowChangeEvent(((dsTestRow)(e.Row)), e.Action));
+                if ((this.dsEmployeeRowDeleting != null)) {
+                    this.dsEmployeeRowDeleting(this, new dsEmployeeRowChangeEvent(((dsEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovedsTestRow(dsTestRow row) {
+            public void RemovedsEmployeeRow(dsEmployeeRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -518,7 +518,7 @@ namespace EndUserRDLC.wwwroot.reports {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsTest ds = new dsTest();
+                dsEmployee ds = new dsEmployee();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -536,7 +536,7 @@ namespace EndUserRDLC.wwwroot.reports {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dsTestDataTable";
+                attribute2.FixedValue = "dsEmployeeDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -580,30 +580,30 @@ namespace EndUserRDLC.wwwroot.reports {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dsTestRow : global::System.Data.DataRow {
+        public partial class dsEmployeeRow : global::System.Data.DataRow {
             
-            private dsTestDataTable tabledsTest;
+            private dsEmployeeDataTable tabledsEmployee;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal dsTestRow(global::System.Data.DataRowBuilder rb) : 
+            internal dsEmployeeRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledsTest = ((dsTestDataTable)(this.Table));
+                this.tabledsEmployee = ((dsEmployeeDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Id {
+            public int Id {
                 get {
                     try {
-                        return ((string)(this[this.tabledsTest.IdColumn]));
+                        return ((int)(this[this.tabledsEmployee.IdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Id\' in table \'dsTest\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id\' in table \'dsEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsTest.IdColumn] = value;
+                    this[this.tabledsEmployee.IdColumn] = value;
                 }
             }
             
@@ -612,14 +612,14 @@ namespace EndUserRDLC.wwwroot.reports {
             public string Name {
                 get {
                     try {
-                        return ((string)(this[this.tabledsTest.NameColumn]));
+                        return ((string)(this[this.tabledsEmployee.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'dsTest\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'dsEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsTest.NameColumn] = value;
+                    this[this.tabledsEmployee.NameColumn] = value;
                 }
             }
             
@@ -628,14 +628,14 @@ namespace EndUserRDLC.wwwroot.reports {
             public string Job {
                 get {
                     try {
-                        return ((string)(this[this.tabledsTest.JobColumn]));
+                        return ((string)(this[this.tabledsEmployee.JobColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'dsTest\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'dsEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsTest.JobColumn] = value;
+                    this[this.tabledsEmployee.JobColumn] = value;
                 }
             }
             
@@ -644,14 +644,14 @@ namespace EndUserRDLC.wwwroot.reports {
             public string Address {
                 get {
                     try {
-                        return ((string)(this[this.tabledsTest.AddressColumn]));
+                        return ((string)(this[this.tabledsEmployee.AddressColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'dsTest\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'dsEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsTest.AddressColumn] = value;
+                    this[this.tabledsEmployee.AddressColumn] = value;
                 }
             }
             
@@ -660,75 +660,75 @@ namespace EndUserRDLC.wwwroot.reports {
             public string Phone {
                 get {
                     try {
-                        return ((string)(this[this.tabledsTest.PhoneColumn]));
+                        return ((string)(this[this.tabledsEmployee.PhoneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'dsTest\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'dsEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsTest.PhoneColumn] = value;
+                    this[this.tabledsEmployee.PhoneColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsIdNull() {
-                return this.IsNull(this.tabledsTest.IdColumn);
+                return this.IsNull(this.tabledsEmployee.IdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetIdNull() {
-                this[this.tabledsTest.IdColumn] = global::System.Convert.DBNull;
+                this[this.tabledsEmployee.IdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNameNull() {
-                return this.IsNull(this.tabledsTest.NameColumn);
+                return this.IsNull(this.tabledsEmployee.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNameNull() {
-                this[this.tabledsTest.NameColumn] = global::System.Convert.DBNull;
+                this[this.tabledsEmployee.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsJobNull() {
-                return this.IsNull(this.tabledsTest.JobColumn);
+                return this.IsNull(this.tabledsEmployee.JobColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetJobNull() {
-                this[this.tabledsTest.JobColumn] = global::System.Convert.DBNull;
+                this[this.tabledsEmployee.JobColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsAddressNull() {
-                return this.IsNull(this.tabledsTest.AddressColumn);
+                return this.IsNull(this.tabledsEmployee.AddressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetAddressNull() {
-                this[this.tabledsTest.AddressColumn] = global::System.Convert.DBNull;
+                this[this.tabledsEmployee.AddressColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPhoneNull() {
-                return this.IsNull(this.tabledsTest.PhoneColumn);
+                return this.IsNull(this.tabledsEmployee.PhoneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetPhoneNull() {
-                this[this.tabledsTest.PhoneColumn] = global::System.Convert.DBNull;
+                this[this.tabledsEmployee.PhoneColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -736,22 +736,22 @@ namespace EndUserRDLC.wwwroot.reports {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class dsTestRowChangeEvent : global::System.EventArgs {
+        public class dsEmployeeRowChangeEvent : global::System.EventArgs {
             
-            private dsTestRow eventRow;
+            private dsEmployeeRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsTestRowChangeEvent(dsTestRow row, global::System.Data.DataRowAction action) {
+            public dsEmployeeRowChangeEvent(dsEmployeeRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsTestRow Row {
+            public dsEmployeeRow Row {
                 get {
                     return this.eventRow;
                 }
